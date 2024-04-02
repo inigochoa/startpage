@@ -1,0 +1,8 @@
+### 11ty ###
+_site
+
+### GitHub ###
+.github
+
+### Build ###
+web-ext-artifacts
