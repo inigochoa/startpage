@@ -45,7 +45,7 @@ Startpage supports various deployment methods.
 ### Docker
 
 ```sh
-docker run -p 8080:8080 -v ./site.js:/usr/src/app/_data/site.js inigochoa/startpage
+docker run -p 8080:8080 -v ./site.js:/usr/src/app/src/_data/site.js inigochoa/startpage
 ```
 
 ### Docker compose
@@ -61,7 +61,7 @@ services:
       - 8080:8080
     restart: unless-stopped
     volumes:
-      - ./data/site.js:/usr/src/app/_data/site.js
+      - ./data/site.js:/usr/src/app/src/_data/site.js
 ```
 
 ### Static site
