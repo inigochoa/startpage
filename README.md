@@ -2,6 +2,8 @@
 
 A simple but customizable startpage.
 
+![Startpage demo image](../media/startpage.png?raw=true)
+
 ## Installation
 
 ```sh
