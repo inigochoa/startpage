@@ -1,0 +1,22 @@
+<section class="flex flex-row flex-wrap justify-center link-list max-w-6xl mx-auto pt-6 sm:pt-9">
+  {% for linkList in site.links|sort(false, false, 'name') %}
+    <div
+      class="bg-section duration-300 mb-4 min-h-2.5 mx-2 p-3 rounded-md transform transition-all w-44 hover:shadow-lg"
+      style="--list-color: {{ linkList.color }}"
+    >
+      <h2 class="font-medium m-4 select-none text-2xl">{{ linkList.name }}</h2>
+
+      <ul>
+        {% for link in linkList.links|sort(false, false, 'name') %}
+          <li class="mb-2">
+            <a
+              class="inline-block m-1 text-base"
+              href="{{ link.link }}"
+              title="{{ link.name }}"
+            >{{ link.name }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endfor %}
+</section>

@@ -1,0 +1,22 @@
+@tailwind base;
+
+@tailwind components;
+
+:focus-visible,
+.focus-visible {
+  @apply outline-dashed outline-2 outline-offset-4 outline-garnet;
+}
+
+.link-list div h2 {
+  color: var(--list-color);
+}
+
+.link-list div li a:active,
+.link-list div li a:focus,
+.link-list div li a:hover {
+  color: var(--list-color);
+  @apply focus-visible;
+  outline-color: var(--list-color);
+}
+
+@tailwind utilities;

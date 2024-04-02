@@ -1,0 +1,19 @@
+---
+permalink: /manifest.json
+---
+
+{
+  "author": "{{ extension.author | default('inigochoa') }}",
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "description": "{{ extension.description | default('Simple startpage. Made by inigochoa') }}",
+  "icons": {
+    "64": "assets/images/icon-64.png"
+  },
+  "manifest_version": 2,
+  "name": "{{ extension.title | default('Startpage') }}",
+  "permissions": [],
+  "short_name": "{{ extension.shorttitle | default('startpage') }}",
+  "version": "{{ extension.version | default('1.0.0') }}"
+}

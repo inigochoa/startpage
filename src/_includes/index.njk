@@ -1,0 +1,11 @@
+{% extends 'layouts/base.njk' %}
+
+{% block content %}
+  {{ super() }}
+
+  {% include 'partials/_message.njk' %}
+
+  {% include 'partials/_search_bar.njk' %}
+
+  {% include 'partials/_link_list.njk' %}
+{% endblock %}

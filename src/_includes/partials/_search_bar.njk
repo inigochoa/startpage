@@ -1,0 +1,14 @@
+<section class="inline-block mx-auto relative w-full sm:w-2/3 lg:w-2/4">
+  <label
+    class="sr-only"
+    for="search-bar"
+  >Search query with {{ site.search.provider }}</label>
+  <input
+    autofocus
+    class="bg-section border-none font-light h-12 mb-4 outline-none px-4 rounded-md shadow-none text-center text-lg text-white w-full focus:outline-dashed focus:outline-2 focus:outline-offset-4 focus:outline-garnet"
+    data-url="{{ site.search.url }}"
+    id="search-bar"
+    name="search-bar"
+    placeholder="Search with {{ site.search.provider }}"
+  />
+</section>

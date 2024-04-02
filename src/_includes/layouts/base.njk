@@ -1,0 +1,40 @@
+{% set assetsDir = '/assets/' %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% metagen
+      title=site.title | default('Startpage'),
+      desc=site.description | default('Simple startpage. Made by inigochoa'),
+      url=site.url|default('') ~ page.url|url
+    %}
+    {% eleventyGoogleFonts 'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;500&display=swap' %}
+    <link
+      href="{{ assetsDir }}css/style.css?{% version %}"
+      rel="stylesheet"
+    />
+    <link
+      href="{{ assetsDir }}images/favicon.ico?{% version %}"
+      rel="icon"
+    />
+    <link
+      href="{{ assetsDir }}images/favicon.svg?{% version %}"
+      rel="icon"
+      type="image/svg+xml"
+    />
+    <link
+      href="{{ assetsDir }}images/apple-touch-icon.png?{% version %}"
+      rel="apple-touch-icon"
+    />
+  </head>
+  <body class="bg-background flex font-light font-mono items-center justify-center min-h-screen p-6 text-primary">
+    <main class="text-center w-full">
+      {% block content %}{% endblock %}
+    </main>
+
+    <script
+      src="{{ assetsDir }}js/main.js?{% version %}"
+      type="module"
+    ></script>
+  </body>
+</html>
